@@ -1,0 +1,12 @@
+{
+  "updated": "2026-10-05",
+  "coverage": "Verified October games. Follow the official team schedule for the full season and any changes.",
+  "source": "https://seatgeek.com/baton-rouge-zydeco-tickets/schedule",
+  "games": [
+    {"date":"2026-10-16","time":"19:05","opponent":"Monroe Moccasins","home":true,"venue":"Raising Cane’s River Center"},
+    {"date":"2026-10-17","time":"19:05","opponent":"Monroe Moccasins","home":false,"venue":"Monroe Civic Center Arena"},
+    {"date":"2026-10-23","time":"19:00","opponent":"Mid-South Monarchs","home":false,"venue":"Landers Center"},
+    {"date":"2026-10-24","time":"19:00","opponent":"Mid-South Monarchs","home":false,"venue":"Landers Center"},
+    {"date":"2026-10-25","time":"15:05","opponent":"Mid-South Monarchs","home":true,"venue":"Raising Cane’s River Center"}
+  ]
+}
