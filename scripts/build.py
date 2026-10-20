@@ -64,3 +64,6 @@ print(f'Built {len(posts)} articles and {len(schedule["games"])} games into {OUT
 from seo import enhance
 enhance(OUT, posts, page)
 
+
+# Preserve the Search Console ownership file in every deployment.
+shutil.copyfile(ROOT/'google42d048aafc7190d1.html', OUT/'google42d048aafc7190d1.html')
