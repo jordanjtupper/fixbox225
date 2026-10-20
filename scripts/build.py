@@ -61,3 +61,6 @@ for p in posts:
 (OUT/'404.html').write_text(page('Page not found','<section class="section wrap"><h1>Off the ice.</h1><p>That page could not be found.</p><a class="button" href="./index.html">Back to The Fish Box</a></section>'))
 (OUT/'.nojekyll').touch()
 print(f'Built {len(posts)} articles and {len(schedule["games"])} games into {OUT}')
+from seo import enhance
+enhance(OUT, posts, page)
+
