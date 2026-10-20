@@ -37,10 +37,7 @@ def enhance(out, posts, page):
         rel = path.relative_to(out).as_posix()
         depth = '../' if rel.startswith('articles/') else ''
         doc = path.read_text()
-        doc = doc.replace('<nav class="nav" aria-label="Main navigation">', '<nav class="nav" aria-label="Main navigation">')
-        doc = doc.replace('</nav>', f'<a href="{depth}jordan-tupper.html"'+(' aria-current="page"' if rel=='jordan-tupper.html' else '')+'>About Jordan</a></nav>')
         doc = doc.replace(' · The Fish Box</p>', f' · <a rel="author" href="{depth}jordan-tupper.html">Jordan Tupper</a></p>')
-        doc = doc.replace('The Fish Box · Baton Rouge, Louisiana</span>', f'The Fish Box · Baton Rouge, Louisiana · <a href="{depth}jordan-tupper.html">By Jordan Tupper</a></span>')
         if rel == '404.html':
             doc = doc.replace('</head>', '<meta name="robots" content="noindex"></head>')
             path.write_text(doc)
