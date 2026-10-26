@@ -28,7 +28,7 @@ for p in (ROOT/'posts').glob('*.md'):
     _,meta,body=p.read_text().split('---',2)
     post=json.loads(meta); post['body']=markdown(body); post['slug']=p.stem
     posts.append(post)
-posts.sort(key=lambda p:p['date'],reverse=True)
+# Sort same-day posts by their filename slug, newest recap ahead of preview.\nposts.sort(key=lambda p: (p['date'], p['slug']), reverse=True)
 
 def page(title,content,depth=0,active='Home',description=None):
     base='../'*depth
